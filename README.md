@@ -2,7 +2,8 @@
 
 BOS is a high-performance, premium landing page designed for the next generation of business management. Built with a focus on minimalist aesthetics, fluid animations, and a "system-first" philosophy, BOS replaces scattered tools with a unified operating layer.
 
-![BOS Landing Page](https://via.placeholder.com/1200x600/060608/6c63ff?text=BOS+Operating+System)
+<img width="928" height="458" alt="image" src="https://github.com/user-attachments/assets/53923469-3dd3-4b38-a26c-e39d3eaa47fc" />
+
 
 ## ✨ Features
 
