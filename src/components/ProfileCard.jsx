@@ -130,19 +130,21 @@ const ProfileCardComponent = ({
   const handlePointerMove = useCallback(event => {
     const shell = shellRef.current;
     if (!shell || !tiltEngine) return;
+    if (event.pointerType !== 'mouse' && !enableMobileTilt) return;
     const { x, y } = getOffsets(event, shell);
     tiltEngine.setTarget(x, y);
-  }, [tiltEngine]);
+  }, [tiltEngine, enableMobileTilt]);
 
   const handlePointerEnter = useCallback(event => {
     const shell = shellRef.current;
     if (!shell || !tiltEngine) return;
+    if (event.pointerType !== 'mouse' && !enableMobileTilt) return;
     shell.classList.add('active', 'entering');
     if (enterTimerRef.current) window.clearTimeout(enterTimerRef.current);
     enterTimerRef.current = window.setTimeout(() => shell.classList.remove('entering'), ANIMATION_CONFIG.ENTER_TRANSITION_MS);
     const { x, y } = getOffsets(event, shell);
     tiltEngine.setTarget(x, y);
-  }, [tiltEngine]);
+  }, [tiltEngine, enableMobileTilt]);
 
   const handlePointerLeave = useCallback(() => {
     const shell = shellRef.current;
